@@ -1,0 +1,61 @@
+:root {
+    --box-height: 100px;
+    --box-color: red
+}
+
+.box1 {
+    height: var(--box-height);
+    background-color: var(--box-color);
+    margin-top: 10px;
+}
+
+.box2 {
+    height: var(--box-height);
+    background-color: var(--box-color);
+    margin-top: 10px;
+}
+
+.box3 {
+    height: var(--box-height);
+    background-color: var(--box-color);
+    margin-top: 10px;
+
+}
+
+.detail {
+    --p_font-size: 30px;
+    /* font-size: var(--p_font-size) */
+}
+
+.detail span {
+    font-size: var(--p_font-size);
+}
+
+/* ghi đè */
+.box3 {
+    height: 300px;
+}
+
+.content {
+    --box-color: red;
+}
+
+.box4 {
+
+    height: var(--box-height);
+    background-color: var(--box-color, purple);
+}
+
+p::first-line {
+    color: red;
+}
+
+span {
+    display: inline-block;
+
+}
+
+span::first-line {
+    color: purple;
+    background-color: yellow;
+}

@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+
+    <style>
+        .box {
+            width: 100%;
+            height: 120px;
+            background: rgb(190, 124, 167);
+        }
+
+        .box::before {
+            content: "";
+            display: block;
+            width: 50px;
+            height: 50px;
+            background-color: #fff;
+        }
+
+        .box::after {
+            content: "";
+            display: block;
+            width: 50px;
+            height: 50px;
+            background-color: #fff;
+        }
+
+        h1::first-letter {
+            font-size: 50px;
+        }
+
+        h1::first-line {
+            color: red;
+        }
+
+        h1::selection {
+            background-color: aqua;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="content">
+        <div class="box1">Box1</div>
+        <div class="box2">Box2</div>
+        <div class="box3">Box3</div>
+        <p class="detail">Chào mừng đến <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. At voluptates
+                temporibus sunt. Quam repellat veniam magni, consectetur corrupti illo accusamus nisi maxime perferendis
+                laudantium? Accusamus laborum explicabo alias nam harum?</span> Lorem ipsum dolor sit amet consectetur
+            adipisicing elit. Ex dolor quibusdam nisi placeat error debitis, nihil sint, modi ea soluta tenetur
+            reiciendis at ut magnam ipsum, sapiente eius et odit!.</p>
+        <div class="box4">Box4</div>
+    </div>
+
+    <div class="pseudo_element">
+        <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus non commodi, vero officia laborum earum
+            exercitationem laudantium suscipit, repudiandae fugiat corrupti inventore in vel eveniet sunt dolor nam,
+            aspernatur facilis.
+            Eveniet officia voluptatem dolores ipsum molestias similique. Iusto minima tempora, odit, debitis sed fuga
+            pariatur, asperiores ipsum autem possimus quasi veniam. Animi enim id possimus obcaecati in nemo suscipit
+            nobis.
+            Aliquam quaerat, voluptate veritatis obcaecati aspernatur ut, a nemo in hic, quo voluptas dignissimos
+            repudiandae dicta incidunt. Deleniti commodi consectetur accusantium. Omnis obcaecati accusamus error
+            aspernatur nam consectetur minima odio!
+            Sit, esse minus vero facilis, inventore earum odio quae possimus debitis nulla repudiandae veniam porro
+            natus repellendus facere quis veritatis ex modi sunt neque! Nulla amet consequatur totam distinctio
+            exercitationem.</span>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolore eaque quidem nam inventore corporis a
+            quisquam, eos in. Eos eius maiores laudantium iure sapiente tempora, temporibus quia modi accusamus
+            asperiores!
+            Commodi ut quisquam id culpa consequatur molestias, autem doloribus. Error tempora delectus quisquam non.
+            Repellendus deserunt totam nam, in necessitatibus non, amet sed quod rem dignissimos odio, nostrum fugiat
+            nobis!
+            Saepe, rem labore. Corporis accusamus minus unde sapiente error aperiam beatae soluta repellendus!
+            Consequuntur quas quae saepe accusamus atque similique, recusandae quia facere numquam iste doloribus iure
+            quibusdam reiciendis porro?
+            Ipsa, eos temporibus. Ex quisquam obcaecati rem inventore. Voluptatem quam reiciendis eveniet. Quis
+            repellendus, animi quasi esse mollitia iste unde et tempora recusandae accusamus, corrupti nesciunt, id quam
+            temporibus quo!
+            Obcaecati, veritatis soluta? Repudiandae doloribus numquam sint accusamus temporibus et quam veniam, ullam
+            praesentium vitae nam eum ipsum beatae dolor, minus, dicta nobis incidunt! Expedita pariatur totam non.
+            Quod, repudiandae.
+            Rem cumque quos adipisci odit iusto. Qui magnam perferendis ex fugit, beatae saepe dolores iste provident,
+            exercitationem accusantium praesentium omnis enim blanditiis voluptatibus. Tempore nam dolore cum hic
+            possimus vel.
+            Veniam reprehenderit, inventore consequatur fugit doloribus quaerat! Ullam voluptates, illo doloribus
+            facilis quaerat veniam iure sapiente, perferendis ad soluta necessitatibus dolor alias nulla enim, quod
+            placeat incidunt recusandae cupiditate maxime.
+            Sunt vero aliquam maxime accusantium, unde, mollitia, aspernatur molestias nobis vitae ad iste animi quos.
+            Doloribus, cum labore. Expedita eaque sint ipsum culpa quia magnam reprehenderit soluta minima blanditiis
+            odio.
+            Omnis incidunt magni ullam excepturi ducimus laboriosam dignissimos, veniam aspernatur consequatur sit
+            delectus non nemo quo repellat accusantium, autem labore exercitationem tenetur velit, eum libero eveniet
+            deserunt. Sit, reiciendis nesciunt?
+            Recusandae reprehenderit eos, odit quidem numquam illo veniam. Beatae fugiat repellat asperiores neque,
+            animi vel impedit voluptate alias numquam deleniti, nemo nisi quae nihil ut officiis voluptas atque unde.
+            Deserunt.</p>
+    </div>
+
+
+    <h1>Pseudo-element <br> Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iusto et aliquid vitae facilis
+        odit optio corrupti accusamus, eveniet, praesentium aperiam excepturi. Aspernatur at delectus provident.
+        Molestiae repudiandae inventore deserunt itaque.</h1>
+    <div class="box">
+
+    </div>
+
+</body>
+
+</html>
