@@ -10,7 +10,7 @@
 <body>
     <!--/* <my-button label="click++"></my-button> */-->
 
-    <my-img src="https://blog.coccoc.com/tong-hop-meme-meo/meodoi2/" alt="Ảnh meme"></my-img>
+    <my-img src="https://blog.coccoc.com/wp-content/uploads/2024/01/meme-meo-khoc-4-1.png" alt="Ảnh meme"></my-img>
 </body>
 <script>
     // class MyButton extends HTMLElement {
@@ -54,14 +54,14 @@
             this.shadowRoot.innerHTML = `
                 <style>
                     img{
-                        width: 100%;
+                        width: 900px;
                         transition: transform 0.4s ease
                     }
                     img:hover{
-                        transform:scale(0.5) 
+                        transform:scale(1.1) 
                     }
                        
-                <style/>
+                </style>
                 <img/>
                     `
         }
@@ -88,6 +88,8 @@
         }
     }
     customElements.define('my-img', MyImage)
+    // chạy lệnh này trong console
+    // document.querySelector('my-img').setAttribute('src', 'https://blog.coccoc.com/wp-content/uploads/2024/01/meme-meo-khoc.png');
 </script>
 
 </html>
