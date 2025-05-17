@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!--/* <my-button label="click++"></my-button> */-->
+
+    <my-img src="https://blog.coccoc.com/tong-hop-meme-meo/meodoi2/" alt="Ảnh meme"></my-img>
+</body>
+<script>
+    // class MyButton extends HTMLElement {
+    //     constructor() {
+    //         super(); //gọi constructor của HTMLElement
+
+
+    //         // Shadow DOM(tuỳ chọn, giúp cách ly css/js)
+    //         const shadow = this.attachShadow({ mode: 'open' });
+
+    //         //giao diện html
+    //         shadow.innerHTML = `
+    //             <style>
+    //                 button{
+    //                     background: rgb(90 90 98);
+    //                     color: white;
+    //                 }
+    //             </style>
+    //             <button>Click</button>
+    //         `;
+    //     }
+    //     connectedCallback() {
+    //         // Khi thêm vào trang lấy nội đung từ thuộc tính label và hiển thị
+    //         const label = this.getAttribute('label') || 'Click'
+    //         const button = this.shadowRoot.querySelector('button')
+    //         button.textContent = label
+    //         //mỗi lần click in ra lần đó
+    //         button.addEventListener('click', () => {
+    //             console.log(label);
+
+    //         })
+    //     }
+    // }
+    // customElements.define('my-button', MyButton)
+
+    class MyImage extends HTMLElement {
+        constructor() {
+            super()
+            this.attachShadow({ mode: 'open' })
+
+            this.shadowRoot.innerHTML = `
+                <style>
+                    img{
+                        width: 100%;
+                        transition: transform 0.4s ease
+                    }
+                    img:hover{
+                        transform:scale(0.5) 
+                    }
+                       
+                <style/>
+                <img/>
+                    `
+        }
+        //Xác định thuộc tính để theo dõi
+        static get observedAttributes() {
+            return ['src', 'alt']
+        }
+        //cập nhật src và alt sau khi thay đổi ảnh
+        attributeChangedCallback(name, oldValue, newValue) {
+            if (name === 'src' || name === 'alt') {
+                this.shadowRoot.querySelector('img').setAttribute(name, newValue)
+                console.log(name, newValue);
+
+            }
+        }
+
+        connectedCallback() {
+            //set src và alt ban đầu
+            const img = this.shadowRoot.querySelector('img')
+            const src = this.getAttribute('src') || ''
+            const alt = this.getAttribute('alt') || ''
+            img.setAttribute('src', src)
+            img.setAttribute('alt', alt)
+        }
+    }
+    customElements.define('my-img', MyImage)
+</script>
+
+</html>
